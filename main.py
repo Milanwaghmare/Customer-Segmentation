@@ -6,8 +6,8 @@ from src.extract import extract_transactional_data
 from src.extract import extract_customer_data
 from src.transform import calculate_rfm_and_segment
 
-from dotenv import load_dotenv
-load_dotenv() #only for local testing
+# from dotenv import load_dotenv
+# load_dotenv() #only for local testing
 
 # import variables from .env file
 dbname = os.getenv('dbname')
