@@ -17,8 +17,8 @@ def connect_to_redshift(dbname, host, port, user, password):
 
 
 def extract_transactional_data(dbname,host,port,user,password):
-    # extracts data from redshift
-    # querying the table online_transactions_cleaned from bootcamp data warehouse
+    """Extracts data from redshift"""
+    """Querying the table online_transactions_cleaned from bootcamp data warehouse"""
     
     connect = connect_to_redshift(dbname, host, port, user, password)
 
@@ -33,14 +33,14 @@ def extract_transactional_data(dbname,host,port,user,password):
 
 def extract_customer_data(dbname,host,port,user,password):
 
-    # extracts data from redshift
-    # querying the table online_transactions_cleaned from bootcamp data warehouse
-    # create variable as transactions_count from distinct invoices
-    # create variable as product_count from distinct stock code
-    # extract max invoice date as recent purchase made
-    # average  total order value rounded to 2
-    # extract year from invoice_date as 2011
-    # having order value greater than 0 to remove cancellation invoices
+    """Extracts data from redshift"""
+    """Querying the table online_transactions_cleaned from bootcamp data warehouse"""
+    """Create variable as transactions_count from distinct invoices"""
+    """Create variable as product_count from distinct stock code"""
+    """Extract max invoice date as recent purchase made"""
+    """Average  total order value rounded to 2"""
+    """Extract year from invoice_date as 2011"""
+    """Having order value greater than 0 to remove cancellation invoices"""
 
     connect = connect_to_redshift(dbname, host, port, user, password)
 
