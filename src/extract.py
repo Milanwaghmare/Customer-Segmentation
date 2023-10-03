@@ -1,5 +1,3 @@
-from typing import Iterator
-
 import psycopg2
 import pandas as pd
 import numpy as np
@@ -18,7 +16,7 @@ def connect_to_redshift(dbname, host, port, user, password):
 
 def extract_transactional_data(dbname,host,port,user,password):
     """Extracts data from redshift"""
-    """Querying the table online_transactions_cleaned from bootcamp data warehouse"""
+    # Querying the table online_transactions_cleaned from bootcamp data warehouse
     
     connect = connect_to_redshift(dbname, host, port, user, password)
 
@@ -33,14 +31,16 @@ def extract_transactional_data(dbname,host,port,user,password):
 
 def extract_customer_data(dbname,host,port,user,password):
 
-    """Extracts data from redshift"""
-    """Querying the table online_transactions_cleaned from bootcamp data warehouse"""
-    """Create variable as transactions_count from distinct invoices"""
-    """Create variable as product_count from distinct stock code"""
-    """Extract max invoice date as recent purchase made"""
-    """Average  total order value rounded to 2"""
-    """Extract year from invoice_date as 2011"""
-    """Having order value greater than 0 to remove cancellation invoices"""
+    """
+    Extracts data from redshift
+    1. Querying the table online_transactions_cleaned from bootcamp data warehouse
+    2.  Create variable as transactions_count from distinct invoices
+    3.  Create variable as product_count from distinct stock code
+    4.  Extract max invoice date as recent purchase made
+    5. Average total order value rounded to 2
+    6. Extract year from invoice_date as 2011
+    7.  Having order value greater than 0 to remove cancellation invoices
+    """
 
     connect = connect_to_redshift(dbname, host, port, user, password)
 
