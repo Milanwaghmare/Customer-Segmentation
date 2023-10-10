@@ -1,5 +1,6 @@
 import os
 import numpy as np
+import pandas as pd
 from datetime import datetime
 
 from src.extract import extract_transactional_data
@@ -26,8 +27,13 @@ print(customer_data_df.info())
 
 
 customer_data_df = calculate_rfm_and_segment(customer_data_df)
+
+
+customer_data_df = customer_data_df.groupby(['customer_id']).agg(value_segment=('value_segment', 'first'),rfm_customer_segments=('rfm_customer_segments', 'first'),rfm_score = ('rfm_score','first')).reset_index()
 print(customer_data_df.head())
 
+#Connection to local folder
+print("loading data to csv")
 
 
 #this creates a variable that calculates how long it takes to run the script
